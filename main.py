@@ -4,7 +4,6 @@ from secrets import token_urlsafe
 import boto3
 import pathlib
 import time
-import database
 import os
 
 ostrich = Client("bot",
@@ -46,7 +45,6 @@ async def start(client, message):
             ),
             reply_to_message_id=message.message_id
         )
-    database.scrape(message)
 
 @ostrich.on_message(filters.command(["help"]))
 async def assist(client, message):
