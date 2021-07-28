@@ -6,4 +6,4 @@ COPY . .
 
 RUN python3 -m pip install -U -r requirements.txt
 
-CMD [ "python", "-u", "./main.py" ]
+CMD python3 -u ./main.py
